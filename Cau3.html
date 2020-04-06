@@ -7,8 +7,24 @@
 <body>
 <script>
     function isFibonacci(x) {
+        let fibo1 = 1;
+        let fibo2 = 1;
+        let fibo = 2;
 
+        while(fibo1 + fibo2 <= x){
+            fibo = fibo1 + fibo2;
+            fibo2 = fibo1;
+            fibo1 = fibo;
+        }
+
+        if (fibo === x){
+            return true;
+        }else {
+            return false;
+        }
     }
+    n = 14;
+    document.write(isFibonacci(n));
 </script>
 </body>
 </html>
